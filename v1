@@ -1,0 +1,20 @@
+print('This is a GPA Calculator')
+desgpa = float(input('Desired GPA: '))
+sumpoints = float(input('Current sum of points: '))
+sumgpaunits = float(input('Current sum of GPA units: '))
+n=int(input('How many semesters? '))
+sems = []
+
+for i in range(0, n): 
+  print('How many credits in semester ',i+1, ':',sep='')
+  semcredit = int(input()) 
+  sems.append(semcredit) # adding the element 
+
+semgpa=(desgpa*(sumgpaunits+sems[0])-sumpoints)/(sems[0])
+
+semgpa2=(desgpa*(sumgpaunits+sems[0]+sems[1])-sumpoints)/(sems[0]+sems[1])
+
+print ('Required GPA to reach desired GPA in 1 semester is: ')
+print (semgpa)
+print ('Required GPA to reach desired GPA in 2 semesters is: ')
+print (semgpa2)
